@@ -14,7 +14,7 @@ class PlayButton {
     this.btn = document.querySelector('#btn');
     this.btn.addEventListener('click', this.pause);
   }
-  // TODO(you): Add methods as necessary.
+// create the buttons and linked to the images
 
   pause() {
   	console.log('pause');

@@ -1,10 +1,9 @@
-// This class will represent the menu screen that you see when you first load
-// the music visualizer.
-//
-// See HW4 writeup for more hints and details.
+
 class MenuScreen {
   constructor(startMusic) {
     // TODO(you): Implement the constructor and add fields as necessary.
+    // on menu screem is from where i want to push the music. i alocated a json file on the
+    // same directory of the files. just the path with raw data worked
     this.startMusic = startMusic;
     this.JSON_PATH = 'https://raw.githubusercontent.com/rafanoia2/CSTP1206/master/songs.json';
     this.Info = [];
@@ -36,7 +35,8 @@ class MenuScreen {
   	e.preventDefault();
   	const input = document.querySelector('#query-input');
   	
-  	// to choose a theme randomly with math function
+    // to choose a theme randomly with math function
+    // first i clear the  the text
   	var themeValue = input.value;
   	if(input.value == ''){
   		themeValue = this.theme[ Math.floor(Math.random()*this.theme.length) ];

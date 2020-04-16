@@ -1,12 +1,5 @@
-// This class will represent the music visualizer screen, i.e. the screen that
-// you see after you select a song.
-//
-// This class should create and own:
-//   - 1 AudioPlayer
-//   - 1 GifDisplay
-//   - 1 PlayButton
-//
-// See HW4 writeup for more hints and details.
+// this will be our music screem layout
+
 class MusicScreen {
   constructor() {
     // TODO(you): Implement the constructor and add fields as necessary.
@@ -20,7 +13,7 @@ class MusicScreen {
     this.showMusicPage = this.showMusicPage.bind(this);
 
   }
-  // TODO(you): Add methods as necessary.
+ 
 
   play() {
   	this.audioPlayer = new AudioPlayer();
@@ -39,7 +32,7 @@ class MusicScreen {
     this.audioPlayer.play();
     this.gifDisplay.nextPreLoad();
   }
-
+// not sure if it is working, i pause the video but the video keep playing, the music goes off
   pause() {
   	this.audioPlayer.pause();
   }

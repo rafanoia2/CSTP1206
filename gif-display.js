@@ -22,7 +22,7 @@ class GifDisplay {
     this.nextPreLoad = this.nextPreLoad.bind(this);
     this.second = this.second.bind(this);
 
-    // preload first Gif
+    // here i load the first Gif
     var myImage = new Image();
 	myImage.src = this.Info.data[0].images.downsized.url;
 	myImage.addEventListener("load", this.second);
@@ -31,9 +31,8 @@ class GifDisplay {
 	this.preload.push(myImage);
 
   }
-  // TODO(you): Add methods as necessary.
 
-  // preload second Gif
+  // and now the second Gif
   second() {
   	console.log('finish 0');
   	var myImage = new Image();
@@ -43,15 +42,14 @@ class GifDisplay {
 	this.back.style.backgroundImage = "url('"+ this.backGif +"')";
 	this.preload.push(myImage);
   }
-
+ // had to difer the preload with a _ because there is a function with preload
   _preload(index) {
 
-  	// push preloaded Gif
+  	// create the Gif
 	if(this.myImage){
 	  	this.preload.push(this.myImage);
 	}
 
-	// finish preload & test result
   	if(index == this.Info.data.length){
   		console.log(this.preload);
   		for(var k in this.preload){
